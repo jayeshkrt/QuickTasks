@@ -1,10 +1,13 @@
 import random
 import json
+from re import T
 
 import torch
 
 from model import NeuralNet
 from nltk_utils import bag_of_words, tokenize
+
+from tag_handler import output_return
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
@@ -43,8 +46,17 @@ def get_response(msg):
     if prob.item() > 0.75:
         for intent in intents['intents']:
             if tag == intent["tag"]:
-                return random.choice(intent['responses'])
+                if tag=="weather_value":
+                    return tag
+                else:
+                    return random.choice(intent['responses'])
+                
     
     return "I do not understand..."
 
-    
+while True:
+    inp = input("You: ")
+    if inp=="bye":
+        break
+    else:
+        print("Sam: "+get_response(inp))

@@ -4,6 +4,9 @@
       "tag": "greeting",
       "patterns": [
         "Hi",
+        "aur bhai kya haal hal chaal chal hai hain",
+        "aur sunao",
+        "kaun hai ho tu app aap ap",
         "Hey",
         "How are you",
         "Is anyone there?",
@@ -15,6 +18,85 @@
         "Hello, thanks for visiting",
         "Hi there, what can I do for you?",
         "Hi there, how can I help?"
+      ]
+    },
+    {
+      "tag": "information",
+      "patterns": [
+        "Who are you?", 
+        "What can you do?", 
+        "aur kya kya kar sakte ho?",
+        "kya kar sakte ho?",
+        "tu aap kya kar sakta hai",
+        "apne baare me batao",
+        "kaun ho hai bhai tu tum",
+        "kya naam hai tera tumhara aapka",
+        "kuch aur sunao suna",
+        "give your features",
+        "what else things you can do?",
+        "Why are you?", 
+        "Tell me about yourself",
+        "What are your functions?",
+        "Can you do this?",
+        "Functions",
+        "How can you help?",
+        "I need your help"
+        ],
+      "responses": [
+        "I can do: \nMobile recharge\nDTH\nTemperature\nLive running status\nLive station\nSeat availability\nFare inquiry\nTrain between two stations\nPNR Status\nMeal on train"
+      ]
+    },
+    {
+      "tag": "weather",
+      "patterns": [
+        "how's the weather",
+        "weather updates",
+        "weather report",
+        "will it rain today?",
+        "what temperature is it at the moment",
+        "what will be the weather on saturday, monday, tuesday, wednesday, thursday, friday, sunday",
+        "how will it be tomorrow?",
+        "will it rain tomorrow?",
+        "what will be the wind speed?",
+        "how sunny will it be?",
+        "baarish kab hogi?",
+        "kal ka mausam kaisa hoga",
+        "kitne degree tapmaan rahega?",
+        "dhoop kab nikalegi",
+        "kitne din me paani aega",
+        "pani kab aaega",
+        "kitne baje baarish hogi",
+        "aaj ka mausam kaisa hoga",
+        "mausam ki jankari jaankari jaankaari"
+      ],
+      "responses": [
+        "Please enter your city, state and country separated by commas!\nMausam ki taaza jaankari k liye\nCSC [space] city, state(short form) aur country\nlikhein: \n"
+      ]
+    },
+    {
+      "tag": "weather_value",
+      "patterns": ["csd city, state, country", "Csd city, state, country", "csd city, state, country", "CSD city, state, country", "CSD khandwa, madhya pradesh, India", "CSD mundi, MP, India","CSD bir, mundi, madhya pradesh, india","CSD bir, mp, india"],
+      "responses": [
+        "Weather updates are: "
+      ]
+    },
+    {
+      "tag": "cricket",
+      "patterns": [
+        "cricket score kya hua hai",
+        "live cricket score",
+        "score live",
+        "india vs england australia new zealand south africa zimbabwe pakistan bangladesh west indies sri lanka afghanistan",
+        "ind vs eng aus nz sa zimb pak ban bang wi sl afg",
+        "khel updates",
+        "khel khabar jankaari jankari",
+        "score kya hua hai",
+        "aaj ka match",
+        "match score",
+        "odi t20 test match cricket today live score"
+      ],
+      "responses": [
+        "Here are the updates: "
       ]
     },
     {

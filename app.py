@@ -70,12 +70,18 @@ class ChatApplication:
         self.text_widget.configure(state=NORMAL)
         self.text_widget.insert(END, msg1)
         self.text_widget.configure(state=DISABLED)
-        
+
         msg2 = f"{bot_name}: {get_response(msg)}\n\n"
-        self.text_widget.configure(state=NORMAL)
-        self.text_widget.insert(END, msg2)
-        self.text_widget.configure(state=DISABLED)
-        
+
+        if msg2 == "weather":
+            self.text_widget.configure(state=NORMAL)
+            self.text_widget.insert(END, "Enter city, state(short form), country")
+            self.text_widget.configure(state=DISABLED)    
+        else:
+            self.text_widget.configure(state=NORMAL)
+            self.text_widget.insert(END, msg2)
+            self.text_widget.configure(state=DISABLED)
+            
         self.text_widget.see(END)
              
         
